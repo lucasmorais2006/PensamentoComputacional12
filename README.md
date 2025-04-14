@@ -1,4 +1,4 @@
-# Exercícios-da-Discipina-de-Pensamento-Computacional
+# Exercícios da Discipina de Pensamento Computacional
 
 ## Este repositório contém todos os exercícios desenvolvidos para a disciplina de Pensamento Computacional.
 
