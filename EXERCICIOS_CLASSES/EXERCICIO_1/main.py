@@ -2,7 +2,7 @@ from models.livro import Livro
 
 livro = Livro("1808", "Laurentino Gomes", 2007, 384, 1)
 
-#avançar 4 paginas do livro
+#avançar 13 paginas do livro
 livro.avancar_pagina()
 livro.avancar_pagina()
 livro.avancar_pagina()

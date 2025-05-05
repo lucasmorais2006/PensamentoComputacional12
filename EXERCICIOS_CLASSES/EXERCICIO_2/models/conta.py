@@ -8,10 +8,10 @@ class ContaBancaria:
     def deposito(self, valor: float):
         if valor > 0:
             self.saldo += valor
-            self.historico.append(f"Valor de depósito: {valor:.2f}")
-            print(f"Valor de depósito: {valor:.2f}")
+            self.historico.append(f"Valor do depósito: {valor:.2f}")
+            print(f"Valor do depósito: {valor:.2f}")
         else:
-            print("Valor de depósito invalido!!!")
+            print("Valor de depósito inválido!")
         
     def sacar(self, valor: float):
         if valor <= self.saldo + self.limite:
@@ -19,17 +19,17 @@ class ContaBancaria:
             self.historico.append(f"Valor do saque: {valor:.2f}")
             print(f"Valor do saque: {valor:.2f}")
         else:
-            print("Saldo Insuficiente!!!")
+            print("Saldo Insuficiente!")
 
     def transferir(self, valor: float, conta_destino):
         if valor <= self.saldo + self.limite:
             self.saldo -= valor
             conta_destino.saldo += valor
-            self.historico.append(f"Transferencia de {valor:.2f} para {conta_destino.titular}")
-            conta_destino.historico.append(f"Transferencia de {valor:.2f} recebida de {self.titular}")
-            print(f"Transferencia de {valor:.2f} para {conta_destino.titular} realizada com sucesso.")
+            self.historico.append(f"Transferência de {valor:.2f} para {conta_destino.titular}")
+            conta_destino.historico.append(f"Transferência de {valor:.2f} recebida de {self.titular}")
+            print(f"Transferência de {valor:.2f} para {conta_destino.titular} realizada com sucesso.")
         else:
-            print("Saldo Insuficiente!!!")
+            print("Saldo Insuficiente!")
 
     def exibir_historico(self):
         if not self.historico:
