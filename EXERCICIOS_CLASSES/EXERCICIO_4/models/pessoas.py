@@ -6,7 +6,7 @@ class Pessoa:
     
     def aniversario(self):
         self.idade += 1
-        print(f"{self.nome} fez aniversario e agora está com {self.idade} anos")
+        print(f"{self.nome} no seu aniversário fará {self.idade} anos")
     
     def crescer(self, valor: float):
         print(f"{self.nome} tinha {self.altura} metros")
@@ -14,7 +14,7 @@ class Pessoa:
             self.altura += valor
             print(f"{self.nome} tem atualmente {self.altura:.2f} metros. Cresceu {valor:.2f} metros")
         else:
-            print("Valor deve ser positivo")
+            print("Valor deve ser positivo e maior que zero.")
 
     def exibir_informacoes(self):
         print(f"Nome: {self.nome}, Idade: {self.idade} anos, Altura: {self.altura} metros")
