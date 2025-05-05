@@ -40,4 +40,4 @@ class ContaBancaria:
 
     def exibir_saldo(self):
         limite_disponivel = self.saldo + self.limite
-        print(f"Saldo Atual: {self.saldo:.2f}, Limite Disponivel: {self.limite:.2f}, Total Disponivel: {limite_disponivel:.2f} ")
+        print(f"Titular da conta: {self.titular}, Saldo Atual: {self.saldo:.2f}, Limite Disponivel: {self.limite:.2f}, Total Disponivel: {limite_disponivel:.2f} ")
