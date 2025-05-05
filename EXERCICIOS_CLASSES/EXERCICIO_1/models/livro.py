@@ -8,7 +8,7 @@ class Livro:
     
     def avancar_pagina(self):
         if self.pagina_atual > self.numero_paginas:
-            print("Número de Páginas ultrapassadas")
+            print("Número de Páginas ultrapassadas do possível")
         else:
             self.pagina_atual += 1
             print(f"Você está na página {self.pagina_atual} do livro {self.titulo}")
