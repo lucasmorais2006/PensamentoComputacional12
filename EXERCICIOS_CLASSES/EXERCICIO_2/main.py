@@ -14,10 +14,10 @@ print(conta1.historico)
 
 conta1.transferir(100.0, conta2)
 
-print(f"Saldo Lucas: {conta1.saldo:.2f}")
-print(f"Saldo Francisco: {conta2.saldo:.2f}")
-print("Histórico Lucas:", conta1.historico)
-print("Histórico Francisco:", conta2.historico)
+print(f"Saldo {conta1.titular}: {conta1.saldo:.2f}")
+print(f"Saldo {conta2.titular}: {conta2.saldo:.2f}")
+print(f"Histórico {conta1.titular}:, {conta1.historico}")
+print(f"Histórico {conta2.titular}:, {conta2.historico}")
 
 
 #EXIBIR HISTORICO
