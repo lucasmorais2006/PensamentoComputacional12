@@ -1,10 +1,11 @@
+
 class ContaBancaria:
     def __init__(self, titular, saldo, limite, historico):
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
         self.historico = []
-
+    
     def deposito(self, valor: float):
         if valor > 0:
             self.saldo += valor
