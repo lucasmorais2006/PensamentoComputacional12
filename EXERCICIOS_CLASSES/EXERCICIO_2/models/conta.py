@@ -1,9 +1,12 @@
 class ContaBancaria:
-    def __init__(self, titular, saldo, limite, historico):
+    def __init__(self, titular, saldo, limite, historico, senha):
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
         self.historico = []
+        self.senha = senha
+        self.conta_ativa = True
+
 
     def deposito(self, valor: float):
         if valor > 0:
@@ -41,3 +44,20 @@ class ContaBancaria:
     def exibir_saldo(self):
         limite_disponivel = self.saldo + self.limite
         print(f"Titular da conta: {self.titular}, Saldo Atual: {self.saldo:.2f}, Limite Disponivel: {self.limite:.2f}, Total Disponivel: {limite_disponivel:.2f} ")
+
+    def excluir_conta(self, senha_digitada):
+        if senha_digitada == self.senha:
+            if self.saldo > 0:
+                pergunta_destinatario = input("Deseja transferir o saldo restante para outro destinatário? [s/n] ")
+                if pergunta_destinatario == 's' or pergunta_destinatario == 'S':
+                    nome_destinatario = input("Digite o nome do destinatário: ")
+                    conta_destino = ContaBancaria(nome_destinatario, 0, 0, [], '')
+                    valor = self.saldo
+                    self.transferir(valor, conta_destino)
+                else:
+                    print(f"Saldo de {self.saldo:.2f} foi perdido.")
+            print(f"Conta de {self.titular} excluída com sucesso.")        
+            self.conta_ativa = False
+            # transferir saldo
+        else:
+            print("Senha incorreta. Conta não excluída.")    
