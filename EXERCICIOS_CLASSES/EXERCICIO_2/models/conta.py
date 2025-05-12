@@ -58,6 +58,5 @@ class ContaBancaria:
                     print(f"Saldo de {self.saldo:.2f} foi perdido.")
             print(f"Conta de {self.titular} excluída com sucesso.")        
             self.conta_ativa = False
-            # transferir saldo
         else:
             print("Senha incorreta. Conta não excluída.")    
