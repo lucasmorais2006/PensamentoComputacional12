@@ -17,6 +17,12 @@ frota.adicionar_veiculo(moto1)
 print("Veículos na frota:")
 frota.listar_veiculos()
 
-distancia = float(input('Qual a distância que será percorrida (em km)? '))  
-consumo_total = frota.calcular_consumo_total(distancia)
-print(f"\nConsumo total da frota para {distancia} km: {consumo_total:.2f} litros")
+try:
+    distancia = float(input('Qual a distância que será percorrida (em km)? '))  
+    if distancia < 0:
+        print("Distância inválida!")
+    else:
+        consumo_total = frota.calcular_consumo_total(distancia)
+        print(f"\nConsumo total da frota para {distancia} km: {consumo_total:.2f} litros")  
+except ValueError:
+    print('Distância inválida. Digite apenas números!')
